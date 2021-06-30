@@ -91,11 +91,6 @@ nav {
     padding: 13px 0px;
     text-align: right;
 }
-
-// i.fa-bars:before:hover .topNav {
-//     display: block;
-// }
-
   
 .topNavContainer:hover .topNav,
 .topNavContainer:focus .topNav  {
@@ -290,6 +285,7 @@ nav {
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
+    align-items: center;
 }
 
 .eventsInfo {
@@ -349,7 +345,10 @@ nav {
     display: flex;
     flex-direction: column;
     padding: 2rem 0;
+    width: 72.5%;
 }
+
+//Footer
 
 .footer {
     background-color: $footerColor;
