@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact: FunPlace</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Walter+Turncoat&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <header id="touch" class="touch ">
+        <div class="topNavContainer clearfix">
+            <i class="fa fa-bars"></i>
+            <nav class="topNav clearfix">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#info1">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1 class="title">Get in Touch</h1>
+    </header>
+
+    <main>
+        <section id="contact" class="contact">
+            <div class="contactContainer">
+                <div class="socialMedia">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <p>info@email.com</p>
+                <p>123-456-7890</p>
+                <p>123 Queen Street West, Unit 10</p>
+                <p>Toronto, Ontario</p>
+                <p>M4V 2D5</p>
+            </div>
+
+            <div class="submitCommentMessage">
+                <div class="formContainer">
+                    <form action="submit">
+
+                        <div class="credentials">
+                            <div class="commentName">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+
+                            <div class="commentEmail">
+                                <label for="email">Email Address</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                        </div>
+
+                        <div class="commentArea">
+                            <label class="sr-only" for="comment">Comment</label>
+                            <textarea name="comment" id="comment" placeholder="Comment"></textarea>
+                        </div>
+
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <p>Copyright © 2019 HackerYou</p>
+    </footer>
+
+</body>
+
+</html>

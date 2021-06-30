@@ -1,0 +1,533 @@
+//MAIN PAGE
+
+//General Styling
+
+html {
+    font-size: 20px;
+}
+
+body {
+    @include elementFont($roboto, 0.8rem, $mainFontColor, 1.4rem, 1px);
+    max-width: 1960px;
+}
+
+h1 {
+    @include elementFont($walter, 3.5rem, $mainFontColor);
+}
+
+h2 {
+    @include elementFont($walter, 1.7rem, $mainFontColor, 3rem)
+}
+
+h3 {
+    @include elementFont($walter, 1.6rem, $mainFontColor, 2.0rem, 1.3px)
+}
+
+a {
+    text-decoration: none;
+    @include elementFont($walter, 0.8rem, $footerColor);
+    background-color: $buttonsColor;
+    padding: 0.1rem 1rem;
+}
+
+nav a {
+    font-family: $roboto;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+}
+
+nav {
+    @include elementFont($roboto, 1.45rem, $mainFontColor)
+}
+
+.wrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+
+//Home Header
+
+.home {
+    background-image: url(../funplaceAssets/home-header.jpg);
+    min-height: 350px;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.home h1 {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+    width: 100%;
+}
+
+.home i {
+    font-size: 2.5rem;
+    color: white;
+    padding: 0;
+}
+
+.topNavContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 1.5%;
+    width: 10%;
+}
+  
+.topNav {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    padding: 13px 0px;
+    text-align: right;
+}
+
+// i.fa-bars:before:hover .topNav {
+//     display: block;
+// }
+
+  
+.topNavContainer:hover .topNav,
+.topNavContainer:focus .topNav  {
+    display: block;
+}
+
+.topNavContainer ul {
+    list-style-type: none;
+}
+
+.topNavContainer a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+
+.topNavContainer a:hover,
+.topNavContainer a:focus {
+    border-bottom: 0.2rem solid $buttonsColor;
+    font-size: 1.15rem;
+}
+
+//Intro Picture
+
+.introPic {
+    background-color: $mainBackgroundColor;
+}
+
+.introPic img {
+    width: 100%;
+}
+
+//First Information Section
+
+.info1 {
+    background: $mainBackgroundColor;
+    padding: 1.5rem 0;
+}
+
+.info1 .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+}
+
+.infoTab {
+    padding: 1.5rem 0;
+}
+
+.info1 h2 {
+    margin: 0 0 0 1rem;
+}
+
+.infoHeadline {
+    display: flex;
+}
+
+.info1 i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $buttonsColor;
+    color: $altBackgoundColor;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+}
+
+//Second Information Section
+
+.info2 img {
+    width: 100%;
+    display: block;
+}
+
+.containerTop,
+.containerBot {
+    display: flex;
+    padding-bottom: 2.5rem;
+}
+
+.containerTop {
+    background-color: $altBackgoundColor;
+    padding-bottom: 1.6rem;
+}
+
+.containerBot {
+    background-color: $altBackgoundColor;
+    justify-content: flex-end;
+}
+
+.topInfo2,
+.botInfo2 {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.topInfo2 {
+    text-align: right;
+    padding: 0;
+}
+
+.botInfo2 {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.topImageContainer {
+    margin-top: -2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.botImageContainer {
+    margin: 2.5rem 0 -6.0rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.topInfo2 .topImageContainer::after,
+.botInfo2 .botImageContainer::after {
+    content: "";
+	position: absolute;
+	width: 100%;
+	height: 95%;
+	background-color: $buttonsColor;
+    z-index: -1;
+}
+
+.topInfo2 .topImageContainer::after {
+    bottom: -0.75rem; 
+    right: -0.75rem;
+}
+
+.botInfo2 .botImageContainer::after {
+    top: -0.75rem;
+    left: -0.75rem;
+}
+
+.topText {
+    width: 75%;
+}
+
+.botText {
+    width: 75%;
+}
+
+//Road Trip
+
+.roadTrip {
+    background-color: $mainBackgroundColor;
+    padding: 4.5rem 0;
+}
+
+.roadTrip .wrapper {
+    width: 72.5%;
+    text-align: center;
+}
+
+.roadTrip h2 {
+    margin-bottom: 0;
+}
+
+.roadTrip p {
+    margin-bottom: 1.5rem;
+}
+
+//Pool Banner 
+
+.poolPic {
+    background-image: url(../funplaceAssets/banner.jpg);
+    min-height: 350px;
+    background-position: center;
+    height: 40vh;
+    width: 100%;
+}
+
+//Events Section 
+
+.events {
+    background-color: $mainBackgroundColor;
+    padding: 2rem 0;
+}
+
+.events .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.eventsInfo {
+    padding-bottom: 2rem;
+}
+
+.events img {
+    width: 100%;
+    display: block;
+}
+
+.eventsImageContainer {
+    width: 90%;
+    margin: 2rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.eventsImageContainer::before {
+    content: "";
+    height: 50%;
+    width: 50%;
+    background-color: $buttonsColor;
+    position: absolute;
+    top: -0.75rem;
+    right: -0.75rem;
+    z-index: -1;
+}
+
+.eventsImageContainer::after {
+    content: "";
+    height: 50%;
+    width: 50%;
+    background-color: $buttonsColor;
+    position: absolute;
+    bottom: -0.75rem;
+    left: -0.75rem;
+    z-index: -1;
+}
+
+//Gallery Album Section
+
+.album {
+    background-color: $altBackgoundColor;
+}
+
+.album img {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.album .img3 {
+    display: none;
+}
+
+.album .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.footer {
+    background-color: $footerColor;
+    text-align: center;
+    padding: 0.25rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+//Tablet Media Query
+
+@media (min-width: 768px) {
+    //General
+
+    body {
+        font-size: 0.7rem;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+        margin-right: 1.5rem;
+
+    }
+
+    //Home Section
+
+    .home {
+        padding-left: 7.5%;
+        min-height: 300px;
+        height: 60vh;
+        background-size: cover;
+        background-position: center;
+        align-items: flex-start;
+    }
+
+    .home h1 {
+        justify-content: left;
+        padding: 5.5rem 0 0 0.25rem;
+        font-size: 3.5rem;
+    }
+
+    .home i {
+        visibility: hidden;
+    }
+
+    .topNav {
+        display: block;
+        width: 100%;
+    }
+
+    .topNavContainer ul {
+        display: flex;
+        padding: 0;
+        margin: 0 0 0 -.25rem;
+    }
+
+    //Intro Picture Section
+
+    .introPic {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .introPic img {
+        width: 50%;
+        max-width: calc(992px / 2);
+        margin-top: -13rem;
+    }
+
+    //Info 1 Section
+
+    .info1 {
+        padding: 4.5rem 0;
+    }
+
+    .info1 .wrapper {
+        flex-direction: row;
+    }
+
+    .infoTab p {
+        margin-left: 3.5rem;
+    }
+
+    //Info 2 Section
+
+    .info2 {
+        display: flex;
+    }
+
+    .info2 .topInfo2,
+    .info2 .botInfo2,
+    .info2 .topText,
+    .info2 .botText {
+        width: 85%;
+    }
+
+    .botInfo2 .botImageContainer::after {
+        bottom: -0.75rem;
+        top: inherit;
+    }
+
+    //Events Section
+
+    .events {
+        padding: 3rem 0;
+    }
+
+    .events .wrapper {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 95%;
+        align-items: center;
+    }
+
+    .events .eventsImageContainer,
+    .events .eventsInfo {
+        padding: 0;
+    }
+
+    .events .eventsImageContainer {
+        width: calc(80% / 3)
+    }
+
+    .events .eventsInfo {
+        width: calc((80% / 3) * 2);
+        text-align: left;
+    }
+
+    .eventsInfo h2 {
+        margin: 0;
+    }
+
+    .eventsInfo p {
+        margin-top: 0;
+    }
+
+    .eventsImageContainer::before {
+        visibility: hidden;
+    }
+
+    .eventsImageContainer::after {
+        height: 98.5%;
+        width: 98.5%;
+    }
+
+    //Gallery Album
+
+    .album .img3 {
+        display: inline-block;
+    }
+    
+    .album .wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+        justify-content: space-evenly;
+    }
+
+    .album .wrapper > * {
+        margin-right: 0.7rem;
+        width: calc((100% - 2.1rem) / 3)
+    }
+}
+
+//Small Desktop Media Query
+
+@media (min-width: 992px) {
+    html {
+        font-size: 21px;
+    }
+}
+
+//Large Display Media Query
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 22px;
+    }
+}

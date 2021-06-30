@@ -1,0 +1,10 @@
+@mixin elementFont($fontFamily, $fontSize, $color, $lineHeight: normal, $letterSpacing: normal) {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $color;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+}
+
+
+

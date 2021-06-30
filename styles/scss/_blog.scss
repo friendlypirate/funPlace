@@ -1,0 +1,343 @@
+//BLOG PAGE
+
+.blog h2 {
+    margin: 0;
+    font-size: 2.0rem;
+    letter-spacing: 0.1rem;
+}
+
+.blogHome {
+    background-image: url(../funplaceAssets/blog-header.jpg);
+    min-height: 250px;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.blogHome h1 {
+    flex-grow: 1;
+    @include elementFont($walter, 3.2rem, $mainFontColor, 3.04rem);
+    padding-top: 12.5%;
+    width: 100%;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.blogHome i {
+    font-size: 2.5rem;
+    color: white;
+    padding: 0;
+}
+
+.blogHome a {
+    background-color: transparent;
+}
+
+.blogHome nav {
+    @include elementFont($roboto, 1.45rem, $mainFontColor);
+}
+
+.blogHome .topNavContainer {
+    height: 10%;
+}
+
+//Blog Article and Aside
+
+.blogMainContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.article {
+    background-color: $mainBackgroundColor;
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 0 0.5rem 0;
+}
+
+.article img {
+    width: 100%;
+    display: block;
+}
+
+.articleImageContainer {
+    width: calc(100% - 0.75rem);
+    position: relative;
+    z-index: 1;
+}
+
+.articleTextContainer {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding-top: 1rem;
+}
+
+.articleImageContainer::after {
+    content: "";
+    height: calc(100% + 0.75rem);
+    width: calc(100% + 0.75rem);
+    position: absolute;
+    bottom: -0.75rem;
+    left: -0.75rem;
+    background-color: $buttonsColor;
+    z-index: -1;
+}
+
+.articleTextContainer::after {
+    content: "";
+    height: 100%;
+    width: calc(100% - 5px);
+    border-left: 5px solid $buttonsColor;
+    border-bottom: 5px solid $buttonsColor;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.articleText {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+    z-index: 1;
+}
+
+
+.aside {
+    display: flex;
+    background-color: $mainBackgroundColor;
+    justify-content: center;
+    padding: 3.5rem 0 0.5rem 0;
+}
+
+.asideContainer {
+    width: 75%;
+    background-color: $altBackgoundColor;
+}
+
+.asideImageContainer {
+    width: 115%;
+    margin-left: -18.5%;
+    margin-top: -3.5%;
+}
+
+.aside img {
+    width: 100%;
+}
+
+.mission {
+    margin: 0 auto;
+    width: 75%;
+
+}
+
+.mission h4 {
+    @include elementFont($walter, 1.2rem, $mainFontColor);
+    margin: 0;
+    padding-top: 1rem;
+}
+
+.mission li {
+    color: $buttonsColor;
+}
+
+.mission .recentList {
+    color: $mainFontColor;
+}
+
+.mission p {
+    margin: 0;
+    padding: 0.5rem 0 1.75rem 0;
+}
+
+.mission ul {
+   padding-inline-start: 1rem;
+   margin: 0.5rem 0 1.5rem 0;
+}
+
+//Comment Section
+
+.comments {
+    background-color: $mainBackgroundColor;
+    padding: 1.5rem 0 3rem 0;
+}
+
+.comments .wrapper {
+    width: 100%;
+}
+
+.comments h4 {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.comments input,
+.comments textarea {
+    color: white;
+}
+
+.postComments {
+    width: 80%;
+    margin: 0 5% 0 12.5%;
+}
+
+.commentGroup {
+    padding: 1rem 0;
+}
+
+.submitCommentMessage {
+    font-size: 0.65rem;
+}
+
+.credentials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.credentials div {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.credentials label {
+    margin-left: 1rem;
+}
+
+.credentials input {
+    background-color: $mainBackgroundColor;
+    border: none;
+    border-bottom: 0.1rem solid $buttonsColor;
+    padding: 0;
+}
+
+.commentArea {
+    padding: 1.5rem 0;
+}
+
+.commentArea textarea {
+    width: 100%;
+    height: 7.5rem;
+    padding: 1rem;
+    background-color: $mainBackgroundColor;
+    border: 0.1rem solid $buttonsColor;
+}
+
+.commentArea textarea::placeholder {
+    color: $mainFontColor;
+}
+
+.submitCommentMessage input[type="submit"] {
+    width: 100%;
+    @include elementFont($walter, 1rem, $footerColor);
+    background-color: $buttonsColor;
+    padding: 0.1rem 0.4rem;
+    border: none;
+}
+
+//BLOG PAGE MEDIA QUERY TABLET
+
+@media (min-width: 768px) {
+    .blogHome {
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;    
+    }   
+    
+    .blogHome h1 {
+        padding: 2rem 0 0 0;
+        text-align: left;
+        font-size: 3.5rem;
+    }
+
+    .blogHome .topNavContainer,
+    .blogHome h1 {
+        margin-left: 7.5%;
+    }
+
+    .blogHome i {
+        display: none;
+    }
+
+    .blogHome ul {
+        margin-right: 0;
+    }
+
+    //Aside and Article Section
+
+    .blogMainContainer {
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: $mainBackgroundColor;
+    }
+
+    .blogMainContainer .aside {
+        width: 40%;
+        margin: 0;
+        padding: 3rem 0 0 0;
+        height: 100%;
+    }
+
+    .blogMainContainer .article {
+        width: 60%;
+        margin: -4rem 0 0 0;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .articleImageContainer::after {
+        height: 98%;
+        width: 98%;
+    }
+
+    //Comments Section;
+
+    .comments {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .postComments {
+        width: 60%;
+        margin: 0;
+    }
+
+    .comments .wrapper {
+        width: 80%;
+    }
+
+    .commentGroup {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .commentImageContainer {
+        width: 25%;
+        padding-top: 0.35rem;
+        margin-right: 0.5rem;
+    }
+
+    .commentGroup img {
+        width: 90%;
+    }
+
+    .commentGroup .commentContainer {
+        width: calc(75% - 0.5rem);
+    }
+
+    .comments h4,
+    .comments p {
+        margin: 0;
+    }
+}

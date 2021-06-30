@@ -1,0 +1,193 @@
+// CONTACT PAGE 
+
+.touch {
+    background-image: url(../funplaceAssets/contact-header.jpg);
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.touch i {
+    font-size: 2.5rem;
+}
+
+.touch h1 {
+    font-size: 2.6rem;
+    margin-left: 1rem;
+    flex-grow: 1;
+    max-width: 50%;
+    padding-top: 12.5%;
+}
+
+.touch nav {
+    @include elementFont($roboto, 1.45rem, $mainFontColor)
+}
+
+.touch .topNavContainer {
+    height: 10%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;;
+}
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: $mainBackgroundColor;
+    text-align: center;
+    padding: 3.6rem;
+}
+
+.socialMedia {
+    padding-left: 1rem;
+}
+
+.contactContainer i {
+    font-size: 1.2rem;
+    letter-spacing: 1rem;
+}
+
+.contactContainer p {
+    margin: 0;
+}
+
+.contactContainer p:nth-child(2) {
+    padding: 0.5rem 0;
+}
+
+.contact .submitCommentMessage {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 0 2.5rem 0;
+    background-color: $mainBackgroundColor;
+}
+
+.formContainer {
+    width: 90%;
+    position: relative;
+    padding: 1.5rem 0;
+    background-color: $altBackgoundColor;
+    z-index: 2;
+}
+
+.formContainer input,
+.formContainer textarea {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.contact form {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contact .formContainer::before {
+    content: "";
+    height: 25%;
+    width: 25%;
+    border-left: 0.65rem solid $buttonsColor;
+    border-top: 0.65rem solid $buttonsColor;
+    position: absolute;
+    top: -0.65rem;
+    left: -0.65rem;
+}
+
+.contact .formContainer::after {
+    content: "";
+    height: 25%;
+    width: 25%;
+    border-right: 0.65rem solid $buttonsColor;
+    border-bottom: 0.65rem solid $buttonsColor;
+    position: absolute;
+    bottom: -0.65rem;
+    right: -0.65rem;
+    z-index: 1;
+}
+
+.contact input,
+.contact textarea {
+    background-color: $altBackgoundColor;
+}
+
+.contact footer {
+    padding-top: 1rem;
+}
+
+//CONTACT PAGE MEDIA QUERY TABLET
+
+@media (min-width: 768px) {
+    .touch {
+        flex-direction: column;
+        text-align: left;
+        background-image: cover;
+        min-height: 350px;
+    }
+
+    .touch ul, 
+    .touch h1 {
+        margin: 0;
+        padding: 0 0 0 5rem;
+    }
+
+    .touch h1 {
+        padding-top: 2.1rem;
+        max-width: 80%;
+        font-size: 3.3rem;
+    }
+
+    .touch i {
+        visibility: hidden;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 1.25rem;
+        background-color: $mainBackgroundColor;
+    }
+
+    .contact .contactContainer {
+        width: 35%;
+        text-align: left;
+        padding: 3rem 1rem 3rem 5rem; 
+    }
+
+    .contactContainer i {
+        font-size: 0.9rem;
+        letter-spacing: 0.75rem;;
+    }
+
+    .contactContainer p {
+        line-height: 1rem;
+    }
+
+    .socialMedia {
+        padding: 0;
+    }
+
+    .contact .submitCommentMessage {
+        width: 65%;
+        margin: -5rem 0.5rem 0 0;
+        background-color: transparent;
+    }
+    
+    .contact .formContainer::before {
+        display: none;
+    }
+    
+    .contact .formContainer::after {
+        height: 95%;
+        width: 95%;
+    }
+
+}
