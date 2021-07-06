@@ -332,20 +332,66 @@ nav {
     background-color: $altBackgoundColor;
 }
 
-.album img {
-    width: 100%;
-    padding: 1rem 0;
-}
-
-.album .img3 {
-    display: none;
-}
-
 .album .wrapper {
     display: flex;
     flex-direction: column;
     padding: 2rem 0;
-    width: 72.5%;
+    width: 85%;
+    position: relative;
+}
+
+.album .carouselPic,
+.album .carouselHidden {
+    display: none;
+    text-align: center;
+}
+
+.album .carouselVisible {
+    display: block;
+    animation: fadePic 2s;
+}
+
+.album .carouselPic img {
+    width: 85%;
+    height: auto;
+}
+
+.album .carouselButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.album .carouselButtons button {
+    color: $mainFontColor;
+    border-radius: 50%;
+    background-color: $mainBackgroundColor;
+    border: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.album .carouselButtons button#carouselPrev {
+    margin-left: -0.5rem;
+}
+
+.album .carouselButtons button#carouselNext {
+    margin-right: -0.5rem;
+}
+
+@keyframes fadePic {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 //Footer
@@ -495,12 +541,6 @@ nav {
         height: 98.5%;
         width: 98.5%;
     }
-
-    //Gallery Album
-
-    .album .img3 {
-        display: inline-block;
-    }
     
     .album .wrapper {
         display: flex;
@@ -509,9 +549,18 @@ nav {
         justify-content: space-evenly;
     }
 
-    .album .wrapper > * {
-        margin-right: 0.7rem;
-        width: calc((100% - 2.1rem) / 3)
+    .album .carouselButtons button {
+        font-size: 0.9rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .album .carouselButtons button#carouselPrev {
+        margin-left: 20%;
+    }
+    
+    .album .carouselButtons button#carouselNext {
+        margin-right: 20%;
     }
 }
 

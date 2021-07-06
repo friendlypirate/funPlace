@@ -147,15 +147,23 @@
     </section>
 
     <section id="album" class="album">
-      <div class="wrapper">
-        <div class="img1">
+      <div class="wrapper carousel">
+        <div class="carouselPic carouselVisible">
           <img src="funplaceAssets/gallery-image-1.jpg" alt="playground">
+
         </div>
-        <div class="img2">
+        <div class="carouselPic">
           <img src="funplaceAssets/gallery-image-2.jpg" alt="girl sliding">
+
         </div>
-        <div class="img3">
+        <div class="carouselPic">
           <img src="funplaceAssets/gallery-image-3.jpg" alt="kids playing tug o' war">
+
+        </div>
+
+        <div class="carouselButtons">
+          <button id="carouselPrev" aria-label="Previous Slide"><</button>
+              <button id="carouselNext" aria-label="Next Slide">></button>
         </div>
       </div>
     </section>
@@ -163,6 +171,7 @@
   <footer id="footer" class="footer">
     <p>Copyright © 2019 HackerYou</p>
   </footer>
+  <script src="../script.js"></script>
 </body>
 
 </html>
