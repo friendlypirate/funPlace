@@ -653,17 +653,22 @@ nav {
 .album .carouselHidden {
   display: none;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .album .carouselVisible {
   display: block;
-  -webkit-animation: fadePic 2s;
-          animation: fadePic 2s;
+  -webkit-animation: fadePic 1.25s;
+          animation: fadePic 1.25s;
 }
 
 .album .carouselPic img {
   width: 85%;
-  height: auto;
+  height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .album .carouselButtons {
@@ -681,9 +686,9 @@ nav {
 }
 
 .album .carouselButtons button {
-  color: #F3FAFF;
+  color: #044779;
   border-radius: 50%;
-  background-color: #03697C;
+  background-color: #08FDED;
   border: none;
   font-size: 0.7rem;
   font-weight: bold;
@@ -693,11 +698,11 @@ nav {
 }
 
 .album .carouselButtons button#carouselPrev {
-  margin-left: -0.5rem;
+  margin-left: -0.75rem;
 }
 
 .album .carouselButtons button#carouselNext {
-  margin-right: -0.5rem;
+  margin-right: -0.75rem;
 }
 
 @-webkit-keyframes fadePic {
@@ -884,6 +889,14 @@ nav {
             justify-content: space-evenly;
   }
 
+  .album .wrapper > * {
+    width: calc(100% / 2);
+  }
+
+  .album .carouselButtons {
+    width: 100%;
+  }
+
   .album .carouselButtons button {
     font-size: 0.9rem;
     width: 2rem;
@@ -891,11 +904,11 @@ nav {
   }
 
   .album .carouselButtons button#carouselPrev {
-    margin-left: 20%;
+    margin-left: -5%;
   }
 
   .album .carouselButtons button#carouselNext {
-    margin-right: 20%;
+    margin-right: -5%;
   }
 }
 @media (min-width: 992px) {

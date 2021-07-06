@@ -344,16 +344,18 @@ nav {
 .album .carouselHidden {
     display: none;
     text-align: center;
+    align-items: center;
 }
 
 .album .carouselVisible {
     display: block;
-    animation: fadePic 2s;
+    animation: fadePic 1.25s;
 }
 
 .album .carouselPic img {
     width: 85%;
-    height: auto;
+    height: 60vh;
+    object-fit: cover;
 }
 
 .album .carouselButtons {
@@ -366,9 +368,9 @@ nav {
 }
 
 .album .carouselButtons button {
-    color: $mainFontColor;
+    color: $footerColor;
     border-radius: 50%;
-    background-color: $mainBackgroundColor;
+    background-color: $buttonsColor;
     border: none;
     font-size: 0.7rem;
     font-weight: bold;
@@ -378,11 +380,11 @@ nav {
 }
 
 .album .carouselButtons button#carouselPrev {
-    margin-left: -0.5rem;
+    margin-left: -0.75rem;
 }
 
 .album .carouselButtons button#carouselNext {
-    margin-right: -0.5rem;
+    margin-right: -0.75rem;
 }
 
 @keyframes fadePic {
@@ -541,12 +543,31 @@ nav {
         height: 98.5%;
         width: 98.5%;
     }
+
+    //Album Section
     
     .album .wrapper {
         display: flex;
         flex-direction: row;
         width: 85%;
         justify-content: space-evenly;
+    }
+
+
+    //here
+    // .album .wrapper {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-evenly;
+    // }
+
+    .album .wrapper > * {
+        width: calc(100% / 2)
+        // width: 90%;
+    }
+
+    .album .carouselButtons {
+        width: 100%;
     }
 
     .album .carouselButtons button {
@@ -556,11 +577,11 @@ nav {
     }
 
     .album .carouselButtons button#carouselPrev {
-        margin-left: 20%;
+        margin-left: -5%;
     }
     
     .album .carouselButtons button#carouselNext {
-        margin-right: 20%;
+        margin-right: -5%;
     }
 }
 
