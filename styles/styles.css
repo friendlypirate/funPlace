@@ -1565,3 +1565,62 @@ nav {
     width: 95%;
   }
 }
+.modal,
+.modal2 {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  color: #F3FAFF;
+  text-align: center;
+}
+
+.modal h2,
+.modal2 h2 {
+  margin: 0.5rem;
+  border-bottom: 0.1rem solid #08FDED;
+}
+
+.modalButton,
+.modalButton2 {
+  text-decoration: none;
+  font-family: "Walter Turncoat", cursive;
+  font-size: 0.8rem;
+  color: #044779;
+  line-height: normal;
+  letter-spacing: normal;
+  background-color: #08FDED;
+  padding: 0.1rem 1rem;
+  border: none;
+}
+
+.modalButton:hover,
+.modalButton2:hover,
+.modalButton:focus,
+.modalButton2:focus {
+  color: #08FDED;
+  background-color: #044779;
+  cursor: pointer;
+  border: 0.1rem solid #08FDED;
+}
+
+.modalContainer {
+  background-color: #044779;
+  margin: 15% auto;
+  padding: 1rem;
+  border: 0.15rem solid #08FDED;
+  width: 80%;
+}
+
+.closeModal {
+  color: #08FDED;
+  float: right;
+  font-size: 2rem;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+  color: #044779;
+  cursor: pointer;
+}

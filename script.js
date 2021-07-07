@@ -1,3 +1,5 @@
+//Carousel
+
 const album = document.querySelectorAll('.carouselPic')
 const albumLength = album.length
 let albumPosition = 0
@@ -67,4 +69,36 @@ mediaQuerySmall.addEventListener('change', mobileCarousel)
 deskTopCarousel(mediaQuery)
 mobileCarousel(mediaQuerySmall)
 
+
+//Modal - Credit to W3School where I learned to make this
+
+const modal = document.querySelector('.modal');
+const modal2 = document.querySelector('.modal2');
+const modalButton = document.querySelectorAll('.modalButton');
+const modalButton2 = document.querySelectorAll('.modalButton2')
+const modalClose = document.querySelectorAll(".closeModal");
+
+modalButton.forEach(x => x.onclick = () => {
+    console.log('hi')
+    modal.style.display = "block";
+    console.log('hello')
+})
+
+modalButton2.forEach(x => x.onclick = () => {
+    console.log('hi')
+    modal2.style.display = "block";
+    console.log('hello')
+})
+
+modalClose.forEach(x => x.onclick = function() {
+    modal2.style.display = "none";
+  modal.style.display = "none";
+})
+
+window.onclick = function(e) {
+  if (e.target == modal || e.target == modal2) {
+    modal.style.display = "none";
+    modal2.style.display = "none";
+  }
+}
 

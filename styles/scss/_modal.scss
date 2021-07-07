@@ -1,0 +1,59 @@
+//Modal Styling
+
+.modal,
+.modal2 {
+    display: none; 
+    position: fixed;
+    z-index: 999; 
+    left: 0;
+    top: 0;
+    color: $mainFontColor;
+    text-align: center;
+}
+
+.modal h2,
+.modal2 h2 {
+    margin: 0.5rem;
+    border-bottom: 0.1rem solid $buttonsColor;
+}
+
+.modalButton,
+.modalButton2 {
+    text-decoration: none;
+    @include elementFont($walter, 0.8rem, $footerColor);
+    background-color: $buttonsColor;
+    padding: 0.1rem 1rem;
+    border: none;
+}
+
+.modalButton:hover,
+.modalButton2:hover,
+.modalButton:focus,
+.modalButton2:focus {
+    color: $buttonsColor;
+    background-color: $footerColor;
+    cursor: pointer;
+    border: 0.1rem solid $buttonsColor;
+  }
+  
+.modalContainer {
+    background-color: $footerColor;
+    margin: 15% auto;
+    padding: 1rem;
+    border: 0.15rem solid $buttonsColor;
+    width: 80%;
+}
+
+.closeModal {
+    color: $buttonsColor;
+    float: right;
+    font-size: 2rem;
+}
+  
+.closeModal:hover,
+.closeModal:focus {
+    color: $footerColor;
+    cursor: pointer;
+}
+
+
