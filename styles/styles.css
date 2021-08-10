@@ -636,15 +636,6 @@ nav {
   background-color: #474BB5;
 }
 
-.album img {
-  width: 100%;
-  padding: 1rem 0;
-}
-
-.album .img3 {
-  display: none;
-}
-
 .album .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -654,9 +645,83 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 2rem 0;
-  width: 72.5%;
+  width: 85%;
+  position: relative;
 }
 
+.album .carouselPic,
+.album .carouselHidden {
+  display: none;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.album .carouselVisible {
+  display: block;
+  -webkit-animation: fadePic 1.25s;
+          animation: fadePic 1.25s;
+}
+
+.album .carouselPic img {
+  width: 85%;
+  height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.album .carouselButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.album .carouselButtons button {
+  color: #044779;
+  border-radius: 50%;
+  background-color: #08FDED;
+  border: none;
+  font-size: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.album .carouselButtons button#carouselPrev {
+  margin-left: -0.75rem;
+}
+
+.album .carouselButtons button#carouselNext {
+  margin-right: -0.75rem;
+}
+
+@-webkit-keyframes fadePic {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadePic {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .footer {
   background-color: #044779;
   text-align: center;
@@ -810,10 +875,6 @@ nav {
     width: 98.5%;
   }
 
-  .album .img3 {
-    display: inline-block;
-  }
-
   .album .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -829,8 +890,25 @@ nav {
   }
 
   .album .wrapper > * {
-    margin-right: 0.7rem;
-    width: calc((100% - 2.1rem) / 3);
+    width: calc(100% / 2);
+  }
+
+  .album .carouselButtons {
+    width: 100%;
+  }
+
+  .album .carouselButtons button {
+    font-size: 0.9rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .album .carouselButtons button#carouselPrev {
+    margin-left: -5%;
+  }
+
+  .album .carouselButtons button#carouselNext {
+    margin-right: -5%;
   }
 }
 @media (min-width: 992px) {
@@ -1486,4 +1564,63 @@ nav {
     height: 95%;
     width: 95%;
   }
+}
+.modal,
+.modal2 {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  color: #F3FAFF;
+  text-align: center;
+}
+
+.modal h2,
+.modal2 h2 {
+  margin: 0.5rem;
+  border-bottom: 0.1rem solid #08FDED;
+}
+
+.modalButton,
+.modalButton2 {
+  text-decoration: none;
+  font-family: "Walter Turncoat", cursive;
+  font-size: 0.8rem;
+  color: #044779;
+  line-height: normal;
+  letter-spacing: normal;
+  background-color: #08FDED;
+  padding: 0.1rem 1rem;
+  border: none;
+}
+
+.modalButton:hover,
+.modalButton2:hover,
+.modalButton:focus,
+.modalButton2:focus {
+  color: #08FDED;
+  background-color: #044779;
+  cursor: pointer;
+  border: 0.1rem solid #08FDED;
+}
+
+.modalContainer {
+  background-color: #044779;
+  margin: 15% auto;
+  padding: 1rem;
+  border: 0.15rem solid #08FDED;
+  width: 80%;
+}
+
+.closeModal {
+  color: #08FDED;
+  float: right;
+  font-size: 2rem;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+  color: #044779;
+  cursor: pointer;
 }

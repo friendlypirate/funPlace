@@ -89,7 +89,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi adipisci recusandae omnis cupiditate sit!
               Dignissimos facilis adipisci exercitationem optio iure molestiae reiciendis sapiente illum accusamus nam
               assumenda, blanditiis fugiat commodi molestias cum totam.</p>
-            <a href="linktopage.com">Read More</a>
+            <button class="modalButton">Read More</button>
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
               sapiente
               perferendis assumenda quidem omnis, excepturi sed optio sequi, cumque hic pariatur, nulla odit quia.
               Inventore neque explicabo commodi!</p>
-            <a href="linktopage.com">Read More</a>
+            <button class="modalButton">Read More</button>
           </div>
           <div class="botImageContainer">
             <img src="funplaceAssets/right-image.jpg" alt="playing with a toy">
@@ -120,7 +120,7 @@
           alias
           praesentium ad, sed temporibus corporis! Impedit incidunt officiis earum. Quos, similique earum! Pariatur
           dignissimos debitis, neque nulla impedit voluptatum?</p>
-        <a href="somesortathing">Find Out More</a>
+        <button class="modalButton2">Find Out More</button>
       </div>
     </section>
 
@@ -141,28 +141,68 @@
             facilis velit vel alias voluptatibus, fugit totam blanditiis aut dicta quaerat labore id quisquam ipsum sed?
             Eaque, architecto? Odit reprehenderit et quis, doloremque eaque quibusdam molestias dolorum voluptates alias
             ab modi minima sint. Cum, voluptatem non!</p>
-          <a href="somelinkhere">Find Out More</a>
+          <button class="modalButton2">Find Out More</button>
         </div>
       </div>
     </section>
 
     <section id="album" class="album">
-      <div class="wrapper">
-        <div class="img1">
-          <img src="funplaceAssets/gallery-image-1.jpg" alt="playground">
+      <div class="wrapper carousel">
+        <div class="carouselPic carouselVisible">
+          <img src="funplaceAssets/gallery-image-1.jpg" alt="eating healthy">
         </div>
-        <div class="img2">
-          <img src="funplaceAssets/gallery-image-2.jpg" alt="girl sliding">
+        <div class="carouselPic">
+          <img src="funplaceAssets/gallery-image-2.jpg" alt="building with playdoh">
         </div>
-        <div class="img3">
+        <div class="carouselPic">
           <img src="funplaceAssets/gallery-image-3.jpg" alt="kids playing tug o' war">
+        </div>
+        <div class="carouselPic">
+          <img src="funplaceAssets/gallery-image-4.jpg" alt="bouncy castle">
+        </div>
+        <div class="carouselPic">
+          <img src="funplaceAssets/gallery-image-5.jpg" alt="playground">
+        </div>
+        <div class="carouselPic">
+          <img src="funplaceAssets/gallery-image-6.jpg" alt="handpainting">
+        </div>
+        <div class="carouselPic">
+          <img src="funplaceAssets/gallery-image-7.jpg" alt="girl sliding">
+        </div>
+
+        <div class="carouselButtons">
+          <button id="carouselPrev" aria-label="Previous Slide"><</button>
+          <button id="carouselNext" aria-label="Next Slide">></button>
         </div>
       </div>
     </section>
+
+
+    <div id="modal" class="modal">
+      <div class="modalContainer">
+        <span class="closeModal">&times;</span>
+        <h2>More Awesome Reading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatem quia et impedit inventore rerum ea,
+          sed maiores repudiandae ab? Ipsa iusto delectus sint, odit natus alias reiciendis eaque dolor possimus eum?
+          Accusamus quibusdam incidunt quasi consequatur. Laudantium similique voluptatum reprehenderit asperiores
+          perspiciatis explicabo, cum, id, cupiditate dolore ea magni.</p>
+      </div>
+    </div>
+    <div id="modal2" class="modal2">
+      <div class="modalContainer">
+        <span class="closeModal">&times;</span>
+        <h2>Find Everything You Need</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, explicabo id nam quas error distinctio quos!
+          Atque id neque dolores nesciunt illo ratione voluptatem minus tenetur enim? Saepe culpa provident cumque, esse
+          minus nostrum vero, at eveniet in amet eaque.</p>
+      </div>
+    </div>
+
   </main>
   <footer id="footer" class="footer">
     <p>Copyright © 2019 HackerYou</p>
   </footer>
+  <script src="../script.js"></script>
 </body>
 
 </html>

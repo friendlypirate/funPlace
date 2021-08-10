@@ -332,20 +332,68 @@ nav {
     background-color: $altBackgoundColor;
 }
 
-.album img {
-    width: 100%;
-    padding: 1rem 0;
-}
-
-.album .img3 {
-    display: none;
-}
-
 .album .wrapper {
     display: flex;
     flex-direction: column;
     padding: 2rem 0;
-    width: 72.5%;
+    width: 85%;
+    position: relative;
+}
+
+.album .carouselPic,
+.album .carouselHidden {
+    display: none;
+    text-align: center;
+    align-items: center;
+}
+
+.album .carouselVisible {
+    display: block;
+    animation: fadePic 1.25s;
+}
+
+.album .carouselPic img {
+    width: 85%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.album .carouselButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.album .carouselButtons button {
+    color: $footerColor;
+    border-radius: 50%;
+    background-color: $buttonsColor;
+    border: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.album .carouselButtons button#carouselPrev {
+    margin-left: -0.75rem;
+}
+
+.album .carouselButtons button#carouselNext {
+    margin-right: -0.75rem;
+}
+
+@keyframes fadePic {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 //Footer
@@ -496,11 +544,7 @@ nav {
         width: 98.5%;
     }
 
-    //Gallery Album
-
-    .album .img3 {
-        display: inline-block;
-    }
+    //Album Section
     
     .album .wrapper {
         display: flex;
@@ -509,9 +553,35 @@ nav {
         justify-content: space-evenly;
     }
 
+
+    //here
+    // .album .wrapper {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-evenly;
+    // }
+
     .album .wrapper > * {
-        margin-right: 0.7rem;
-        width: calc((100% - 2.1rem) / 3)
+        width: calc(100% / 2)
+        // width: 90%;
+    }
+
+    .album .carouselButtons {
+        width: 100%;
+    }
+
+    .album .carouselButtons button {
+        font-size: 0.9rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .album .carouselButtons button#carouselPrev {
+        margin-left: -5%;
+    }
+    
+    .album .carouselButtons button#carouselNext {
+        margin-right: -5%;
     }
 }
 
