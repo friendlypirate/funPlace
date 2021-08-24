@@ -1,4 +1,4 @@
-#Fun Place
+# Fun Place
 
 About
 - A multipage website using mostly HTML and CSS(Sass)
